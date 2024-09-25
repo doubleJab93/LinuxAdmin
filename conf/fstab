@@ -1,0 +1,54 @@
+
+#
+# /etc/fstab
+# Created by anaconda on Tue Aug  6 02:10:46 2024
+#
+# Accessible filesystems, by reference, are maintained under '/dev/disk/'.
+# See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info.
+#
+# After editing this file, run 'systemctl daemon-reload' to update systemd
+# units generated from this file.
+#
+/dev/mapper/cs-root     /                       xfs     defaults        0 0
+UUID=1939f206-9494-4238-b1ed-3fdcab3e4696 /boot                   xfs     defaults        0 0
+/dev/mapper/cs-home     /home                   xfs     defaults        0 0
+/dev/mapper/cs-swap     none                    swap    defaults        0 0
+
+#
+# (1) Sfecific configuration
+#
+#/dev/sdb1    /testmount    ext4       defaults        0  2
+# UUID = "6604323c-c1fc-4fe7-bf88-d70c8bed6e15"
+
+#/dev/sdd1   /oracle    ext4       defaults        0 2
+
+# (2) /oracle configuration
+#
+#/dev/sdc1  /oracle     xfs     defaults    1 2
+
+# (3) LVM configuration
+#
+#/dev/mapper/vg1-lv1		/lv1	ext4	defaults	0 2
+#/dev/vg1/lv2			/lv2	ext4	defaults	0 2
+
+#/dev/vg1/vg1            /lvm1                   ext4    defaults        1 2
+
+# (4) RAID configuration
+# 
+#/dev/md0         /raid0          xfs            defaults       0  2
+
+#/dev/md0 		/raid5 		xfs			defaults		0 2
+
+#/dev/md0		/raid1 		xfs			dufaults		0 2
+
+# (5) SWAP configuration
+#
+#/swap/swapfile  none    swap    defaults     0 0
+
+
+#
+# (6) SAMBA(CIFS) Mount Test
+#
+#//192.168.10.202/samba_share     /mnt/server     cifs    credentials=/root/cred             0 0
+or
+#//192.168.10.202/samba_share     /mnt/server     cifs    username=soldesk,password=soldesk1.   0 0
